@@ -1,0 +1,39 @@
+html, body {
+    height: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    &:hover {
+        color: var(--bs-primary);
+    }
+}
+.close {
+    font-size: calc(1.275rem + .3vw);
+    font-weight: unset;
+    line-height: 1;
+    color: #000;
+    text-shadow: none;
+    opacity: 1;
+}
+
+.custom-switch {
+    float: right;
+}
+[data-theme="dark"] {
+    background-color: var(--bs-dark) !important;
+    color: #fff;
+    & .close {
+        color: #fff;
+    }
+    & .modal-content {
+        background-color: var(--bs-dark);
+    }
+    & footer a {
+        color: #fff;
+        &:hover {
+            color: var(--bs-primary);
+        }
+    }
+}
+  
