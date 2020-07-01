@@ -25,5 +25,8 @@
     "feather-icons": "^4.28.0",
     "node-minify": "^3.6.0",
     "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "purgecss": "^2.3.0"
   }
 }
