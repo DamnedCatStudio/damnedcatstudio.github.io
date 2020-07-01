@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "purgecss --css css/main.css --content index.html --output css/",
-    "js": "node-minify --compressor gcc --input './js/main.js' --output './js/main.min.js' --option '{\"createSourceMap\": true, \"compilationLevel\": \"ADVANCED\", \"languageIn\": \"ECMASCRIPT6\"}'",
+    "js": "node-minify --compressor gcc --input './js/main.js' --output './js/main.min.js' --option '{\"createSourceMap\": true, \"compilationLevel\": \"WHITESPACE_ONLY\"}'",
     "css": "node-minify --compressor csso --input './css/main.css' --output './css/main.min.css' --option '{\"--comments\": \"first-exclamation\", \"--source-map\": \"file\"}'"
   },
   "repository": {
