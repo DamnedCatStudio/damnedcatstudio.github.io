@@ -6,7 +6,7 @@ The website for Damned Cat Studio
 ### Note
 pushing to master runs CI to clean up code.
 
-### commenting
+### Commenting
 Commenting in JavaScript is handled by [JSDOC](https://jsdoc.app/). 
 @param denotes that there is a required parameter
 @return denotes what the expected return 
@@ -20,7 +20,7 @@ Commenting in JavaScript is handled by [JSDOC](https://jsdoc.app/).
      * @return {type}
      */
 ```
-#### Example:
+##### Example:
 
 ```js
     /**
