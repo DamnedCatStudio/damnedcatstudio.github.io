@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "purgecss --css css/main.css --content index.html --output css/"
+    "clean": "purgecss --css css/main.css --content index.html --output css/",
+    "js": "node-minify --compressor gcc --input './js/main.js' --output './js/main.min.js' --option '{\"createSourceMap\": true, \"compilationLevel\": \"ADVANCED\", \"languageIn\": \"ECMASCRIPT6\"}'",
+    "css": "node-minify --compressor csso --input './css/main.css' --output './css/main.min.css' --option '{\"--comments\": \"first-exclamation\", \"--source-map\": \"file\"}'"
   },
   "repository": {
     "type": "git",
@@ -21,9 +23,7 @@
     "bootstrap": "^5.0.0-alpha1",
     "bootstrap-icons": "^1.0.0-alpha5",
     "feather-icons": "^4.28.0",
+    "node-minify": "^3.6.0",
     "popper.js": "^1.16.1"
-  },
-  "devDependencies": {
-    "purgecss": "^2.3.0"
   }
 }
