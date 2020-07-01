@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "purgecss --css css/main.css --content index.html --output css/"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
     "bootstrap-icons": "^1.0.0-alpha5",
     "feather-icons": "^4.28.0",
     "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "purgecss": "^2.3.0"
   }
 }

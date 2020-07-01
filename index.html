@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link defer rel="stylesheet" href="css/main.css">
+    <meta name="theme-color" content="#343a40" />
+    <meta name="Description" content="Web Application for Damned Cat Studio, as video game development company.">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="preload" href="/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <title>DamnedCatStudio</title>
 </head>
 
-<body class="d-flex flex-column justify-content-center align-items-center p-3">
+<body class="d-flex flex-column justify-content-center align-items-center p-3" data-theme="dark">
     <div class="custom-control custom-switch ml-auto">
         <label class="custom-control-label" for="darkSwitch"><i data-feather="sun"></i></label>
         <input type="checkbox" class="btn-check" id="darkSwitch" name="darkSwitch" />
@@ -58,10 +61,10 @@
 </body>
 
 <script src="/js/feather.min.js"></script>
-<script> feather.replace()</script>
 <script src="/js/popper.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/dark-mode-switch.min.js"></script>
+<script src="js/main.js"></script>
 
 
 </html>
