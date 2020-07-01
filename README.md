@@ -8,14 +8,15 @@ pushing to master runs CI to clean up code.
 
 ### Commenting
 Commenting in JavaScript is handled by [JSDOC](https://jsdoc.app/). 
-@param denotes that there is a required parameter
-@return denotes what the expected return 
-{type} denote the type of parameter or return expected. If there is not return then return type is '{void}'
+@param denotes that there is a required parameter.
+<name> is the name of the parameter.
+@return denotes what the expected return.
+{type} denote the type of parameter or return expected. If there is not return then return type is '{void}'.
 
 ```js
     /**
      * This is a description of a function
-     * @param {type} name
+     * @param {type} <name>
      * 
      * @return {type}
      */
