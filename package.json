@@ -1,32 +1,31 @@
 {
-  "name": "damnedcatstudio.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "damned-cat-studio",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "clean": "purgecss --css css/main.css --content index.html --output css/",
-    "js": "node-minify --compressor gcc --input './js/main.js' --output './js/main.min.js' --option '{\"createSourceMap\": true, \"compilationLevel\": \"WHITESPACE_ONLY\"}'",
-    "css": "node-minify --compressor csso --input './css/main.css' --output './css/main.min.css' --option '{\"--comments\": \"first-exclamation\", \"--source-map\": \"file\"}'"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DamnedCatStudio/damnedcatstudio.github.io.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DamnedCatStudio/damnedcatstudio.github.io/issues"
-  },
-  "homepage": "https://github.com/DamnedCatStudio/damnedcatstudio.github.io#readme",
   "dependencies": {
-    "bootstrap": "^5.0.0-alpha1",
-    "bootstrap-icons": "^1.0.0-alpha5",
-    "feather-icons": "^4.28.0",
-    "node-minify": "^3.6.0",
-    "popper.js": "^1.16.1"
+    "@headlessui/react": "^1.5.0",
+    "@heroicons/react": "^1.0.6",
+    "@tailwindcss/forms": "^0.5.0",
+    "next": "12.1.0",
+    "next-offline": "^5.0.5",
+    "next-themes": "^0.1.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "purgecss": "^2.3.0"
+    "@types/node": "17.0.23",
+    "@types/react": "17.0.42",
+    "autoprefixer": "^10.4.4",
+    "eslint": "8.11.0",
+    "eslint-config-next": "12.1.0",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.23",
+    "typescript": "4.6.2"
   }
 }
