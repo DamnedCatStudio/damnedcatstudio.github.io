@@ -4,9 +4,9 @@ import { Switch } from '@headlessui/react'
 
 
 import Head from 'next/head'
-import Image from 'next/image'
+import Link from 'next/link'
 
-function classNames(...classes) {
+function classNames(...classes:string[]) {
     return classes.filter(Boolean).join(' ')
 }
 
@@ -18,7 +18,7 @@ const Contact: NextPage = () => {
             <Head>
                 <title>Damned Cat Studio</title>
                 <meta property="og:title" content="Contact Us :: Damned Cat Studio" key="title" />
-                <meta name="description" content="Ned to reach us? Contact us on this fancy page!" key="decsription" />
+                <meta name="description" content="Need to reach us? Contact us on this fancy page!" key="description" />
                 <meta name="keywords" content="DCS, Damned Cat Studio, Contact Us" />
                 <meta name="author" content="John Weland" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -201,13 +201,17 @@ const Contact: NextPage = () => {
                                     <div className="ml-3">
                                         <p className="text-base text-gray-500 dark:text-gray-100">
                                             By selecting this, you agree to the{' '}
-                                            <a href="#" className="font-medium text-gray-700 dark:text-gray-300 underline">
-                                                Privacy Policy
-                                            </a>{' '}
-                                            and{' '}
-                                            <a href="#" className="font-medium text-gray-700 dark:text-gray-300 underline">
-                                                Cookie Policy
-                                            </a>
+                                            <Link href="/legal/privacy">
+                                                <a className="font-medium text-gray-700 dark:text-gray-300 underline">
+                                                    Privacy Policy
+                                                </a>
+                                            </Link>
+                                            {' '}and{' '}
+                                            <Link href="/legal/cookies">
+                                                <a className="font-medium text-gray-700 dark:text-gray-300 underline">
+                                                    Cookie Policy
+                                                </a>
+                                            </Link>
                                             .
                                         </p>
                                     </div>

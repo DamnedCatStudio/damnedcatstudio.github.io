@@ -1,8 +1,8 @@
 import '../styles/globals.css'
-import Script from 'next/script'
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
 import Layout from '../components/layout'
+
 
 function DCSApp({ Component, pageProps }: AppProps) {
   return (

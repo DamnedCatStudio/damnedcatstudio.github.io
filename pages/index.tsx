@@ -1,7 +1,9 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import { GetServerSideProps } from 'next'
+import CookieBanner from '../components/cookiebanner'
+
 
 const faqs = [
   {
@@ -20,14 +22,16 @@ const faqs = [
     answer: "We all have cats here, they are always up to mischeif when we want to create."
   }
 ]
-
-const Home: NextPage = () => {
+type props = {
+  acceptedCookies: boolean
+}
+const Home = ({acceptedCookies}: props) => {
   return (
     <>
       <Head>
         <title>Damned Cat Studio</title>
         <meta property="og:title" content="Damned Cat Studio" key="title" />
-        <meta name="description" content="Free Web tutorials" key="decsription" />
+        <meta name="description" content="Damned Cat Studio, main page" key="description" />
         <meta name="keywords" content="DCS, Damned Cat Studio" />
         <meta name="author" content="John Weland" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,14 +43,11 @@ const Home: NextPage = () => {
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
             <div className="absolute inset-0">
-              <Image
+              <video
                 className="h-full w-full object-cover"
-                layout="fill"
                 placeholder='blur'
-                blurDataURL='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
-                priority
-                src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
-                alt="People working on laptops"
+                src="/images/pexels-2.mp4"
+                autoPlay
               />
               <div className="absolute inset-0 bg-gradient-to-tl from-amber-300 to-amber-500 bg-amber-500 mix-blend-multiply" />
             </div>
@@ -140,8 +141,14 @@ const Home: NextPage = () => {
         </div>
       </div>
     </div>
+    <CookieBanner acceptedCookies={acceptedCookies}/>
     </>
   )
 }
 
 export default Home
+
+export const getServerSideProps: GetServerSideProps = async ({req}) => {
+  let accepted = req.cookies.acceptedCookies || 'false'
+  return { props: { "acceptedCookies" : JSON.parse(accepted) } }
+}

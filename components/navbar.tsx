@@ -1,11 +1,11 @@
 import { Fragment } from 'react'
 import Link from 'next/link';
+import Image from 'next/image'
 import { Popover, Transition } from '@headlessui/react'
 import { useState, useEffect } from 'react'
 import { useTheme } from "next-themes"
 
 import {
-  PuzzleIcon,
   HomeIcon,
   ChatAltIcon,
   LocationMarkerIcon,
@@ -13,8 +13,7 @@ import {
   SunIcon,
   MoonIcon,
   XIcon,
-  InformationCircleIcon,
-  FireIcon
+  InformationCircleIcon
 } from '@heroicons/react/outline'
 
 const navItems = [
@@ -70,11 +69,11 @@ const NavBar = () => {
     <Popover className="relative bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 border-gray-100 dark:border-gray-800 py-6 md:justify-start md:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
+          <div className="flex justify-start lg:w-0 lg:flex-1 p-1.5 pb-0 rounded-full ring-2 ring-amber-600 dark:ring-white max-w-[60px]">
             <Link href="/">
               <a>
                 <span className="sr-only">Damned Cat Studio</span>
-                <PuzzleIcon className='w-10 h-10 text-amber-600' />
+                <Image className='rounded-full' width="52px" height="50px" src={'/images/damnedcat.jpeg'} />
               </a>
             </Link>
           </div>
@@ -106,13 +105,14 @@ const NavBar = () => {
             ))}
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <a
-              href="#"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-amber-600 to-amber-700 hover:bg-amber-700 dark:hover:bg-amber-700"
-            >
-              <LocationMarkerIcon className="flex-shrink-0 h-6 w-6 text-white" aria-hidden="true" />
-              Find Us
-            </a>
+            <Link href="/contact">
+              <a
+                className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-amber-600 to-amber-700 hover:bg-amber-700 dark:hover:bg-amber-700"
+              >
+                <ChatAltIcon className="flex-shrink-0 h-6 w-6 text-white" aria-hidden="true" />
+                Contact Us
+              </a>
+            </Link>
             <button
               type="button"
               className="ml-2 flex p-2 rounded-md bg-gradient-to-r from-amber-600 to-amber-700 focus:outline-none focus:ring-2 focus:ring-white"
@@ -137,8 +137,8 @@ const NavBar = () => {
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-gray-800 divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
-                <div>
-                  <PuzzleIcon className='w-10 h-10 text-amber-600' />
+                <div className='p-1.5 pb-0 rounded-full ring-2 ring-amber-600 dark:ring-white'>
+                  <Image className='rounded-full' width="52px" height="50px" src={'/images/damnedcat.jpeg'} />
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="bg-white dark:bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">
@@ -166,13 +166,14 @@ const NavBar = () => {
             <div className="py-6 px-5 space-y-6">
 
               <div>
-                <a
-                  href="#"
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-amber-600 to-amber-700 hover:bg-amber-700 dark:hover:bg-amber-700"
-                >
-                  <LocationMarkerIcon className="flex-shrink-0 h-6 w-6 text-white" aria-hidden="true" />
-                  Find Us
-                </a>
+                <Link href="/contact">
+                  <a
+                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-amber-600 to-amber-700 hover:bg-amber-700 dark:hover:bg-amber-700"
+                  >
+                    <ChatAltIcon className="flex-shrink-0 h-6 w-6 text-white" aria-hidden="true" />
+                    Contact Us
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
