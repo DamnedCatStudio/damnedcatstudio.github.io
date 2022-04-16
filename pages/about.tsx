@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const people = [
     {
         name: 'John Weland',
-        role: 'Co-Fonder | CEO',
+        role: 'Co-Founder | CEO',
         imageUrl:
             '/images/jweland.jpeg',
         twitterUrl: 'https://twitter.com/jdngr_',
@@ -35,8 +36,8 @@ const About = ({ }) => {
                 <div className="space-y-12">
                     <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
                         <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Meet our team</h2>
-                        <p className="text-xl text-gray-500">
-                            Meet our team of idiots; using what they learn to try to do something different!
+                        <p className="text-xl text-gray-500 dark:text-gray-200">
+                            Meet our team; Co-founded by two idiots using what they learn to try to do something different! If you want to join in on our shinanigans <Link href="/contact"><a className="font-bold underline">contact us</a></Link>.
                         </p>
                     </div>
                     <ul

@@ -8,7 +8,7 @@ import { useTheme } from "next-themes"
 import {
   HomeIcon,
   ChatAltIcon,
-  LocationMarkerIcon,
+  PuzzleIcon,
   MenuIcon,
   SunIcon,
   MoonIcon,
@@ -34,6 +34,13 @@ const navItems = [
     href: '/contact',
     icon: ChatAltIcon,
   },
+  {
+    name: 'Our Games',
+    description: "Coming Soon",
+    href: '#',
+    icon: PuzzleIcon,
+    disabled: true
+  },
 ]
 
 
@@ -47,20 +54,33 @@ const NavBar = () => {
     const currentTheme = theme === 'system' ? systemTheme : theme;
 
     if (currentTheme === 'dark') {
+
       return (
-        <SunIcon
-          className='text-white w-6 h-6'
-          role="banner"
+        <button
+          type="button"
+          className="ml-2 flex p-2 rounded-md bg-gradient-to-r from-amber-600 to-amber-700 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-white"
           onClick={() => setTheme('light')}
-        />
+        >
+          <span className="sr-only">Toggle Darkmode</span>
+          <SunIcon
+            className='text-white w-6 h-6'
+            role="banner"
+          />
+        </button>
       )
     } else {
       return (
-        <MoonIcon
-          className='text-white w-6 h-6'
-          role="banner"
+        <button
+          type="button"
+          className="ml-2 flex p-2 rounded-md bg-gradient-to-r from-amber-600 to-amber-700 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-white"
           onClick={() => setTheme('dark')}
-        />
+        >
+          <span className="sr-only">Toggle Darkmode</span>
+          <MoonIcon
+            className='text-white w-6 h-6'
+            role="banner"
+          />
+        </button>
       )
     }
   }
@@ -78,13 +98,7 @@ const NavBar = () => {
             </Link>
           </div>
           <div className="mr-2 ml-[auto] md:hidden">
-          <button
-              type="button"
-              className="ml-2 flex p-2 rounded-md bg-gradient-to-r from-amber-600 to-amber-700 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-white"
-            >
-              <span className="sr-only">Toggle Darkmode</span>
-              {renderThemeToggle()}
-            </button>
+            {renderThemeToggle()}
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <Popover.Button className="bg-white dark:bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">
@@ -93,16 +107,31 @@ const NavBar = () => {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
-            {navItems.map((item) => (
-              <Link href={item.href} key={item.name}>
-                <a
-                  title={item.description}
-                  className="text-base font-medium text-gray-500 hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-100"
-                >
-                  {item.name}
-                </a>
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              if (!item.disabled) {
+                return (
+                  <Link href={item.href} key={item.name}>
+                    <a
+                      title={item.description}
+                      className="text-base font-medium text-gray-500 hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-100"
+                    >
+                      {item.name}
+                    </a>
+                  </Link>
+                )
+              } else {
+                return (
+                  <p
+                    key={item.name}
+                    title={item.description}
+                    className="text-base font-medium text-gray-300 dark:text-gray-700"
+                  >
+                    {item.name}
+                  </p>
+                )
+              }
+            }
+            )}
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <Link href="/contact">
@@ -113,13 +142,7 @@ const NavBar = () => {
                 Contact Us
               </a>
             </Link>
-            <button
-              type="button"
-              className="ml-2 flex p-2 rounded-md bg-gradient-to-r from-amber-600 to-amber-700 focus:outline-none focus:ring-2 focus:ring-white"
-            >
-              <span className="sr-only">Toggle Darkmode</span>
-              {renderThemeToggle()}
-            </button>
+            {renderThemeToggle()}
           </div>
         </div>
       </div>
