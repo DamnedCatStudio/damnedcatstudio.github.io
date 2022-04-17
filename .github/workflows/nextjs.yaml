@@ -34,7 +34,7 @@ jobs:
       - name: Add CNAME file
         run: touch ./out/CNAME
       - name: Update CNAME
-        run: echo \"damnedcat.studio\" >> ./out/CNAME
+        run: echo damnedcat.studio >> ./out/CNAME
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
