@@ -157,7 +157,7 @@ const Home = ({ acceptedCookies }: props) => {
 
 export default Home
 
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+export const getCookiesTest: GetServerSideProps = async ({ req }) => {
   let accepted = req.cookies.acceptedCookies || 'false'
   return { props: { "acceptedCookies": JSON.parse(accepted) } }
 }

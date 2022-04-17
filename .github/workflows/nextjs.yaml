@@ -27,8 +27,14 @@ jobs:
         run: npm ci
       - name: Build project
         run: npm run build
+      - name: Export static files
+        run: npm run export
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
+      - name: Add CNAME file
+        run: touch ./out/CNAME
+      - name: Update CNAME
+        run: echo \"damnedcat.studio\" >> ./out/CNAME
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
