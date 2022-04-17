@@ -93,7 +93,7 @@ const NavBar = () => {
             <Link href="/">
               <a>
                 <span className="sr-only">Damned Cat Studio</span>
-                <Image className='rounded-full' width="52px" height="50px" src={'/images/damnedcat.jpeg'} />
+                <Image className='rounded-full' width={52} height={50} src={'/images/damnedcatstudio.jpg'} alt="Damned Cat Damned Logo" />
               </a>
             </Link>
           </div>
@@ -161,7 +161,7 @@ const NavBar = () => {
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div className='p-1.5 pb-0 rounded-full ring-2 ring-amber-600 dark:ring-white'>
-                  <Image className='rounded-full' width="52px" height="50px" src={'/images/damnedcat.jpeg'} />
+                  <Image className='rounded-full' width={52} height={50} src={'/images/damnedcatstudio.jpg'} alt="Damned Cat Damned Logo" />
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="bg-white dark:bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">
@@ -172,17 +172,34 @@ const NavBar = () => {
               </div>
               <div className="mt-6">
                 <nav className="grid gap-y-8">
-                  {navItems.map((item) => (
-                    <Link href={item.href} key={item.name}>
-                      <a
-                        title={item.description}
-                        className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-700"
-                      >
-                        <item.icon className="flex-shrink-0 h-6 w-6 text-amber-600" aria-hidden="true" />
-                        <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-100">{item.name}</span>
-                      </a>
-                    </Link>
-                  ))}
+
+                  {navItems.map((item) => {
+                    if (!item.disabled) {
+                      return (
+                        <Link href={item.href} key={item.name}>
+                          <a
+                            title={item.description}
+                            className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-700"
+                          >
+                            <item.icon className="flex-shrink-0 h-6 w-6 text-amber-600" aria-hidden="true" />
+                            <span className="ml-3 text-base font-medium text-gray-900 dark:text-gray-100">{item.name}</span>
+                          </a>
+                        </Link>
+                      )
+                    } else {
+                      return (
+                        <p
+                          key={item.name}
+                          title={item.description}
+                          className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-700"
+                        >
+                          <item.icon className="flex-shrink-0 h-6 w-6 text-amber-800" aria-hidden="true" />
+                          <span className="ml-3 text-base font-medium text-gray-300 dark:text-gray-500">{item.name}</span>
+                        </p>
+                      )
+                    }
+                  }
+                  )}
                 </nav>
               </div>
             </div>

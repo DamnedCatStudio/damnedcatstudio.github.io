@@ -25,7 +25,7 @@ const faqs = [
 type props = {
   acceptedCookies: boolean
 }
-const Home = ({acceptedCookies}: props) => {
+const Home = ({ acceptedCookies }: props) => {
   return (
     <>
       <Head>
@@ -55,24 +55,22 @@ const Home = ({acceptedCookies}: props) => {
             <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
               <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                 <span className="block text-white">Get to Know Us</span>
-                <span className="block text-gray-200">customer support</span>
               </h1>
               <p className="mt-6 max-w-lg mx-auto text-center text-xl text-gray-200 sm:max-w-3xl">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                amet fugiat veniam occaecat fugiat aliqua.
+                We are a fledgling company, with hopes to produce great and wonderful, engaging games.
               </p>
               <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                 <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                   <Link href="/contact" >
-                  <a
-                    className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-amber-700 bg-white hover:bg-amber-50 sm:px-8"
-                  >
-                    Let's chat
-                  </a>
+                    <a
+                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-amber-700 bg-white hover:bg-amber-50 sm:px-8"
+                    >
+                      Let's chat
+                    </a>
                   </Link>
                   <a
                     href="#faq"
-                    className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-amber-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+                    className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-amber-500 bg-opacity-80 hover:bg-opacity-90 sm:px-8"
                   >
                     FAQs
                   </a>
@@ -87,35 +85,45 @@ const Home = ({acceptedCookies}: props) => {
       {/* Logo cloud */}
       <div className="bg-gray-100 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm font-semibold uppercase text-gray-500 dark:text-gray-300 tracking-wide">
-            Trusted by over 5 very average small businesses
+          <p className="text-center text-sm font-semibold uppercase text-gray-600 dark:text-gray-300 tracking-wide">
+            Building for the platforms you're on
           </p>
-          <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-            <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-              <img className="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple" />
-            </div>
-            <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-              <img className="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage" />
-            </div>
-            <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-              <img
-                className="h-12"
-                src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                alt="StaticKit"
+          <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-4">
+            <div className="col-span-1 flex justify-center items-center md:col-span-2 lg:col-span-1">
+              <Image
+              width={142}
+              height={80}
+                className="h-20"
+                src="/images/steam-logo.png"
+                alt="Unity"
               />
             </div>
-            <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
-              <img
-                className="h-12"
-                src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                alt="Transistor"
+            <div className="col-span-1 flex justify-center items-center md:col-span-2 lg:col-span-1">
+              <Image
+              width={142}
+              height={80}
+                className="h-20"
+                src="/images/unity-logo.png"
+                alt="Unity"
               />
             </div>
-            <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
-              <img
-                className="h-12"
-                src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                alt="Workcation"
+            <div className="col-span-1 flex justify-center items-center md:col-span-2 md:col-start-2 lg:col-span-1">
+              <Image
+              width={142}
+              height={80}
+                className="h-20"
+                src="/images/meta-logo.png"
+                alt="Meta"
+              />
+
+            </div>
+            <div className="col-span-1 flex justify-center items-center md:col-span-2 md:col-start-4 lg:col-span-1">
+              <Image
+              width={142}
+              height={80}
+                className="h-20"
+                src="/images/oculus-logo.png"
+                alt="Unity"
               />
             </div>
           </div>
@@ -123,33 +131,33 @@ const Home = ({acceptedCookies}: props) => {
       </div>
 
       <div id="faq">
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-        <div className="lg:max-w-2xl lg:mx-auto lg:text-center">
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Frequently asked questions</h2>
-          <p className="mt-4 text-gray-500 dark:text-gray-300">
-            You've got questions, we have answers; though we never claim to have good answers.
-          </p>
-        </div>
-        <div className="mt-20">
-          <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-10">
-            {faqs.map((faq) => (
-              <div key={faq.id}>
-                <dt className="font-semibold text-gray-900 dark:text-white">{faq.question}</dt>
-                <dd className="mt-3 text-gray-600 dark:text-gray-300">{faq.answer}</dd>
-              </div>
-            ))}
-          </dl>
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+          <div className="lg:max-w-2xl lg:mx-auto lg:text-center">
+            <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Frequently asked questions</h2>
+            <p className="mt-4 text-gray-500 dark:text-gray-300">
+              You've got questions, we have answers; though we never claim to have good answers.
+            </p>
+          </div>
+          <div className="mt-20">
+            <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-10">
+              {faqs.map((faq) => (
+                <div key={faq.id}>
+                  <dt className="font-semibold text-gray-900 dark:text-white">{faq.question}</dt>
+                  <dd className="mt-3 text-gray-600 dark:text-gray-300">{faq.answer}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
       </div>
-    </div>
-    <CookieBanner acceptedCookies={acceptedCookies}/>
+      <CookieBanner acceptedCookies={acceptedCookies} />
     </>
   )
 }
 
 export default Home
 
-export const getServerSideProps: GetServerSideProps = async ({req}) => {
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   let accepted = req.cookies.acceptedCookies || 'false'
-  return { props: { "acceptedCookies" : JSON.parse(accepted) } }
+  return { props: { "acceptedCookies": JSON.parse(accepted) } }
 }
