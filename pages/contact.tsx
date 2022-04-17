@@ -222,7 +222,7 @@ const Contact: NextPage = () => {
                                     type="submit"
                                     className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-amber-600 to-amber-700 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-600"
                                 >
-                                    Let's talk
+                                    Let&apos;s talk
                                 </button>
                             </div>
                         </form>

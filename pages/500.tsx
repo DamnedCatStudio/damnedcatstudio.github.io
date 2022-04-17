@@ -7,7 +7,7 @@ export default function Custom500() {
                 <div className="text-center">
                     <p className="text-sm font-semibold text-2xl text-amber-600 uppercase tracking-wide">500 error</p>
                     <h1 className="mt-2 text-4xl font-extrabold text-gray-900 dark:text-gray-100 tracking-tight sm:text-5xl">Something went wrong!</h1>
-                    <p className="mt-2 text-base text-gray-500 dark:text-gray-300">It's not you, its us. Something went wrong, we'll try to fix it.</p>
+                    <p className="mt-2 text-base text-gray-500 dark:text-gray-300">It&apos;s not you, its us. Something went wrong, we&apos;ll try to fix it.</p>
                     <div className="mt-6">
                         <Link href="/">
                             <a className="text-base font-medium text-amber-600 hover:text-amber-500">

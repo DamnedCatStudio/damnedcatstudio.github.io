@@ -65,7 +65,7 @@ const Home = ({ acceptedCookies }: props) => {
                     <a
                       className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-amber-700 bg-white hover:bg-amber-50 sm:px-8"
                     >
-                      Let's chat
+                      Let&apos;s chat
                     </a>
                   </Link>
                   <a
@@ -86,7 +86,7 @@ const Home = ({ acceptedCookies }: props) => {
       <div className="bg-gray-100 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm font-semibold uppercase text-gray-600 dark:text-gray-300 tracking-wide">
-            Building for the platforms you're on
+            Building for the platforms you&apos;re on
           </p>
           <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-4">
             <div className="col-span-1 flex justify-center items-center md:col-span-2 lg:col-span-1">
@@ -135,7 +135,7 @@ const Home = ({ acceptedCookies }: props) => {
           <div className="lg:max-w-2xl lg:mx-auto lg:text-center">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Frequently asked questions</h2>
             <p className="mt-4 text-gray-500 dark:text-gray-300">
-              You've got questions, we have answers; though we never claim to have good answers.
+              You&apos;ve got questions, we have answers; though we never claim to have good answers.
             </p>
           </div>
           <div className="mt-20">

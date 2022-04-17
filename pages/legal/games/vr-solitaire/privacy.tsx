@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
                 <h1>Privacy Policy</h1>
                 <p>Last updated: April 15, 2022</p>
                 <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
-                <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the <a href="https://www.privacypolicies.com/blog/privacy-policy-template/" target="_blank">Privacy Policy Template</a>.</p>
+                <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the <a href="https://www.privacypolicies.com/blog/privacy-policy-template/" target="_blank" rel="noreferrer">Privacy Policy Template</a>.</p>
                 <h2>Interpretation and Definitions</h2>
                 <h3>Interpretation</h3>
                 <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
@@ -57,17 +57,17 @@ const PrivacyPolicy = () => {
                 </ul>
                 <h4>Usage Data</h4>
                 <p>Usage Data maybe collected automatically when using the Service.</p>
-                <p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+                <p>Usage Data may include information such as Your Device&apos;s Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
                 <p>When You access the Service by or through a mobile device, We may collect certain information automatically via Oculus, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
                 <p>This Usage Data maybe collected automatically by oculus and shown in the developer dashboard. However We do not collect this data.</p>
                 <h3>Use of Your Personal Data</h3>
                 <p>The Company may use Personal Data for the following purposes:</p>
                 <ul>
-                    <li><strong>We Don't:</strong> Solitaire does not collect any data other than the usage data polled from Oculus itself.</li>
+                    <li><strong>We Don&apos;t:</strong> Solitaire does not collect any data other than the usage data polled from Oculus itself.</li>
                 </ul>
                 <p>We may share Your personal information in the following situations:</p>
                 <ul>
-                    <li><strong>We Don't:</strong> We don't need to.</li>
+                    <li><strong>We Don&apos;t:</strong> We don&apos;t need to.</li>
                 </ul>
                 <h3>Retention of Your Personal Data</h3>
                 <p>The Company does not collect your data</p>
@@ -78,7 +78,7 @@ const PrivacyPolicy = () => {
                 <p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data was never collected from the Application.</p>
                 <h4>Law enforcement</h4>
                 <p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
-                <p>Luckily, we did not and do not collect any of your data in regards to the Application. You're Solitaire crimes will go on unfettered.</p>
+                <p>Luckily, we did not and do not collect any of your data in regards to the Application. You&apos;re Solitaire crimes will go on unfettered.</p>
                 <h4>Other legal requirements</h4>
                 <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
                 <ul>
@@ -91,11 +91,11 @@ const PrivacyPolicy = () => {
                 <p>Since we do not collect it, there is nothing ot share.</p>
                 <h3>Security of Your Personal Data</h3>
                 <p>The security of Your Personal Data is important to Us, as such we DO NOT collect your data. We may need to in the future for other games but for Solitaire we do not.</p>
-                <h2>Children's Privacy</h2>
+                <h2>Children&apos;s Privacy</h2>
                 <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone  (under the age of 13 or otherwise). If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
-                <p>If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.</p>
+                <p>If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent&apos;s consent before We collect and use that information.</p>
                 <h2>Links to Other Websites</h2>
-                <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
+                <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party&apos;s site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
                 <p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
                 <h2>Changes to this Privacy Policy</h2>
                 <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
@@ -104,7 +104,7 @@ const PrivacyPolicy = () => {
                 <h2>Contact Us</h2>
                 <p>If you have any questions about this Privacy Policy, You can contact us:</p>
                 <ul>
-                    <li>By visiting this page on our website: <a href="https://damnedcat.studio/contact" rel="external nofollow noopener" target="_blank">https://damnedcat.studio/contact</a></li>
+                    <li>By visiting this page on our website: <a href="https://damnedcat.studio/contact" rel="noreferrer external nofollow noopener" target="_blank">https://damnedcat.studio/contact</a></li>
                 </ul>
                 <h2>Deleting your Personal Information</h2>
                 <p>As laid out in this privacy policy; we do not collect any personal data. If you wish to delete your personal data, delete the Application.</p>

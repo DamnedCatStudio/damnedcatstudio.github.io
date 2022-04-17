@@ -1,20 +1,21 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { SpeakerphoneIcon } from '@heroicons/react/outline'
-import  Cookie  from 'js-cookie'
+import Link from 'next/link'
+import Cookie from 'js-cookie'
 import { useState, useEffect } from 'react'
 
 
 type props = {
     acceptedCookies: boolean
 }
-const CookieBanner = ({acceptedCookies}: props) => {
+const CookieBanner = ({ acceptedCookies }: props) => {
     const [accepted, setAccepted] = useState(acceptedCookies);
     useEffect(() => {
-        Cookie.set("acceptedCookies", JSON.stringify(accepted), {expires: 365})
+        Cookie.set("acceptedCookies", JSON.stringify(accepted), { expires: 365 })
     }, [accepted])
 
     if (accepted) return null
-    
+
     return (
         <>
             <div className="fixed inset-x-0 bottom-0">
@@ -26,13 +27,15 @@ const CookieBanner = ({acceptedCookies}: props) => {
                                     <SpeakerphoneIcon className="h-6 w-6 text-white" aria-hidden="true" />
                                 </span>
                                 <p className="ml-3 font-medium text-white truncate">
-                                    <span className="md:hidden">We've got cookies!</span>
-                                    <span className="hidden md:inline"> Cookies Accepted: { acceptedCookies } ... Certian world governments feel we need to let you know we use cookies. </span>
+                                    <span className="md:hidden">We&apos;ve got cookies!</span>
+                                    <span className="hidden md:inline">Certian world governments feel we need to let you know we use cookies.</span>
                                     <span className="block sm:ml-2 sm:inline-block">
-                                        <a href="/legal/cookies" className="text-white font-bold underline">
-                                            {' '}
-                                            Learn more <span aria-hidden="true">&rarr;</span>
-                                        </a>
+                                        <Link href="/legal/cookies">
+                                            <a className="text-white font-bold underline">
+                                                {' '}
+                                                Learn more <span aria-hidden="true">&rarr;</span>
+                                            </a>
+                                        </Link>
                                     </span>
                                 </p>
                             </div>
