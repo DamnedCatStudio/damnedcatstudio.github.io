@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import { GetServerSideProps } from 'next'
-import CookieBanner from '../components/cookiebanner'
 
 
 const faqs = [
@@ -22,10 +20,9 @@ const faqs = [
     answer: "We all have cats here, they are always up to mischeif when we want to create."
   }
 ]
-type props = {
-  acceptedCookies: boolean
-}
-const Home = ({ acceptedCookies }: props) => {
+
+const Home = () => {
+
   return (
     <>
       <Head>
@@ -150,14 +147,9 @@ const Home = ({ acceptedCookies }: props) => {
           </div>
         </div>
       </div>
-      <CookieBanner acceptedCookies={acceptedCookies} />
+      
     </>
   )
 }
 
 export default Home
-
-export const getCookiesTest: GetServerSideProps = async ({ req }) => {
-  let accepted = req.cookies.acceptedCookies || 'false'
-  return { props: { "acceptedCookies": JSON.parse(accepted) } }
-}
