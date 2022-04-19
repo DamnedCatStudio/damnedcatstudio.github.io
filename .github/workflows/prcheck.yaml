@@ -1,6 +1,5 @@
 name: PR - Build Test
 
-
 on:
   pull_request:
     types:
