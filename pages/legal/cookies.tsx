@@ -1,7 +1,7 @@
 const Cookies = () => {
     return (
         <>
-            <article className="prose dark:prose-dark">
+            <article className="prose dark:prose-dark max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
                 <h1>Cookies Policy</h1>
                 <p>Last updated: April 15, 2022</p>
                 <p>This Cookies Policy explains what Cookies are and how We use them. You should read this policy so You can understand what type of cookies We use, or the information We collect using Cookies and how that information is used. This Cookies Policy has been created with the help of the <a href="https://www.privacypolicies.com/cookies-policy-generator/" target="_blank" rel="noreferrer">Cookies Policy Generator</a>.</p>
