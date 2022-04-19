@@ -18,12 +18,12 @@ const Contact: NextPage = () => {
     const [lastname, setLastname] = useState("");
     const [company, setCompany] = useState("");
     const [email, setEmail] = useState("");
-    const [phonenumber, setPhonenumnber] = useState("");
+    const [phonenumber, setPhonenumber] = useState("");
     const [message, setMessage] = useState("");
     const [honeypot, setHoneypot] = useState("");
 
 
-    const submitHandler = async event => {
+    const submitHandler = async (event:any) => {
         event.preventDefault();
         fetch("https://relayforms.com/submit/9A5nePDo7JWygFbuAIpW", {
             method: "POST",
