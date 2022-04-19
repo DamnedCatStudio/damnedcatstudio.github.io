@@ -23,7 +23,7 @@ const Contact: NextPage = () => {
     const [honeypot, setHoneypot] = useState("");
 
 
-    const submitHandler = async event => {
+    const submitHandler = async (event:any) => {
         event.preventDefault();
         fetch("https://relayforms.com/submit/9A5nePDo7JWygFbuAIpW", {
             method: "POST",
