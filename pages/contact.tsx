@@ -18,7 +18,7 @@ const Contact: NextPage = () => {
     const [lastname, setLastname] = useState("");
     const [company, setCompany] = useState("");
     const [email, setEmail] = useState("");
-    const [phonenumber, setPhonenumnber] = useState("");
+    const [phonenumber, setPhonenumber] = useState("");
     const [message, setMessage] = useState("");
     const [honeypot, setHoneypot] = useState("");
 
