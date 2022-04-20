@@ -27,7 +27,7 @@ const CookieBanner = () => {
                             </span>
                             <p className="ml-3 font-medium text-white truncate">
                                 <span className="md:hidden">We&apos;ve got cookies!</span>
-                                <span className="hidden md:inline">Certian world governments feel we need to let you know we use cookies.</span>
+                                <span className="hidden md:inline">We use Cookies, apparently we need to let you know we use cookies.</span>
                                 <span className="block sm:ml-2 sm:inline-block">
                                     <Link href="/legal/cookies">
                                         <a className="text-white font-bold underline">

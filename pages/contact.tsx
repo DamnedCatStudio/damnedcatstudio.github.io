@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 
 import Head from 'next/head'
 import Link from 'next/link'
+import Notice from '../components/notification'
 
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
@@ -21,15 +22,16 @@ const Contact: NextPage = () => {
     const [phonenumber, setPhonenumber] = useState("");
     const [message, setMessage] = useState("");
     const [honeypot, setHoneypot] = useState("");
-
+    const [msgSuccess, setMsgSuccess] = useState(false);
 
     const submitHandler = async (event:any) => {
         event.preventDefault();
-        fetch("https://relayforms.com/submit/9A5nePDo7JWygFbuAIpW", {
+        let botcheck = honeypot.trim();
+        if (botcheck !== "") router.push('/')
+
+        fetch("https://hooks.zapier.com/hooks/catch/12353763/bz8lux3/", {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
+            mode: 'cors',
             body: JSON.stringify({
                 firstname,
                 lastname,
@@ -41,7 +43,11 @@ const Contact: NextPage = () => {
             }),
         })
             .then((res) => {
-                router.push('/')
+                setMsgSuccess(true)
+                setTimeout(()=> {
+                    setMsgSuccess(false)
+                    router.push('/')
+                }, 5000)
             })
             .catch((err) => {
                 console.error(err);
@@ -244,6 +250,7 @@ const Contact: NextPage = () => {
                     </div>
                 </div>
             </div>
+            {!msgSuccess ? null : <Notice />}
         </>
     )
 }
