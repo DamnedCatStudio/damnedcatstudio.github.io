@@ -22,18 +22,16 @@ const Contact: NextPage = () => {
     const [phonenumber, setPhonenumber] = useState("");
     const [message, setMessage] = useState("");
     const [honeypot, setHoneypot] = useState("");
-
+    const [msgSuccess, setMsgSuccess] = useState(false);
 
     const submitHandler = async (event:any) => {
         event.preventDefault();
-        if (honeypot !== "") router.push('/')
-        
+        let botcheck = honeypot.trim();
+        if (botcheck !== "") router.push('/')
+
         fetch("https://hooks.zapier.com/hooks/catch/12353763/bz8lux3/", {
             method: "POST",
             mode: 'cors',
-            headers: {
-                "Content-Type": "application/json",
-            },
             body: JSON.stringify({
                 firstname,
                 lastname,
@@ -45,7 +43,11 @@ const Contact: NextPage = () => {
             }),
         })
             .then((res) => {
-                console.log(res)
+                setMsgSuccess(true)
+                setTimeout(()=> {
+                    setMsgSuccess(false)
+                    router.push('/')
+                }, 5000)
             })
             .catch((err) => {
                 console.error(err);
@@ -248,6 +250,7 @@ const Contact: NextPage = () => {
                     </div>
                 </div>
             </div>
+            {!msgSuccess ? null : <Notice />}
         </>
     )
 }

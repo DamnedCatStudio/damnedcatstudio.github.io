@@ -4,10 +4,7 @@ import { Transition } from '@headlessui/react'
 import { CheckCircleIcon } from '@heroicons/react/outline'
 import { XIcon } from '@heroicons/react/solid'
 
-type props = {
-    message: string
-}
-export default function Notice({message}: props) {
+export default function Notice() {
   const [show, setShow] = useState(true)
 
   return (
@@ -37,18 +34,10 @@ export default function Notice({message}: props) {
                   </div>
                   <div className="ml-3 w-0 flex-1 pt-0.5">
                     <p className="text-sm font-medium text-gray-900">Message Sent Successfully!</p>
-                    <p className="mt-1 text-sm text-gray-500">{message}</p>
+                    <p className="mt-1 text-sm text-gray-500">You&apos;re message has been sent. We&apos;ll get back to you as soon as we can.</p>
                   </div>
                   <div className="ml-4 flex-shrink-0 flex">
-                    <button
-                      className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                      onClick={() => {
-                        setShow(false)
-                      }}
-                    >
-                      <span className="sr-only">Close</span>
-                      <XIcon className="h-5 w-5" aria-hidden="true" />
-                    </button>
+
                   </div>
                 </div>
               </div>
