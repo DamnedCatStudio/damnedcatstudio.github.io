@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 
 import Head from 'next/head'
 import Link from 'next/link'
+import Notice from '../components/notification'
 
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
@@ -25,8 +26,11 @@ const Contact: NextPage = () => {
 
     const submitHandler = async (event:any) => {
         event.preventDefault();
-        fetch("https://relayforms.com/submit/9A5nePDo7JWygFbuAIpW", {
+        if (honeypot !== "") router.push('/')
+        
+        fetch("https://hooks.zapier.com/hooks/catch/12353763/bz8lux3/", {
             method: "POST",
+            mode: 'cors',
             headers: {
                 "Content-Type": "application/json",
             },
@@ -41,7 +45,7 @@ const Contact: NextPage = () => {
             }),
         })
             .then((res) => {
-                router.push('/')
+                console.log(res)
             })
             .catch((err) => {
                 console.error(err);
