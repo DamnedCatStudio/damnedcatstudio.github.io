@@ -50,6 +50,10 @@ const PrivacyPolicy = () => {
                 </ul>
                 <h2>Collecting and Using Your Personal Data</h2>
                 <h3>Types of Data Collected</h3>
+                <h4>Marketing & Analiyics</h4>
+                <p>The app, relying on Ads does collect some data indirectly. Meaning the data is actually captured and used by the Unity Ads API</p>
+                <p>Advertising or marketing, analytics, app functionality, fraud prevention, security, and compliance. As cited in <a href="https://docs.unity.com/ads/GoogleDataSafety.html">Unity's Google Data Safety Guide</a>.</p>
+                <p> Again, we do not collect or store the data directly but this data is used by the advertisement API.</p>
                 <p>We DO NOT collect any personal data. </p>
                 <h2>Other Services</h2>
                 <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party&apos;s site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
