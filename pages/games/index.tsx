@@ -37,7 +37,7 @@ const GamesCatalog = ({}) => {
             >
               <Link href={game.url} passHref>
                 <a className="w-full">
-                  <Image
+                  <img
                     src={game.bannerURL}
                     alt={game.name + " for " + game.platform}
                     title={game.name}

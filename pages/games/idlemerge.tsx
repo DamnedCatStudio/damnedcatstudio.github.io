@@ -73,7 +73,7 @@ const GamePage = ({}) => {
               loop
             />
           ) : (
-            <Image
+            <img
               src={game.featuredImageURL}
               alt={game.featuredImageAlt}
               layout="fill"
@@ -87,7 +87,7 @@ const GamePage = ({}) => {
         {game.stores.map((store, index) => (
           <Link key={index} href={store.URL}>
             <a>
-              <Image
+              <img
                 src={store.badgeURL}
                 alt={store.altText}
                 width={store.badgeWidth}
@@ -118,7 +118,7 @@ const GamePage = ({}) => {
                 }
                 className="carousel-item"
               >
-                <Image
+                <img
                   src={image.URL}
                   alt={image.alt}
                   title={game.name}
