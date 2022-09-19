@@ -31,7 +31,11 @@ const GamesCatalog = ({}) => {
         <h1 className="prose-2xl">Featured Games</h1>
         <div className="carousel w-full bg-gray-50">
           {games.map((game, index) => (
-            <div key={index} id={index + 1} className="carousel-item w-full">
+            <div
+              key={index}
+              id={(index + 1).toString()}
+              className="carousel-item w-full"
+            >
               <Link href={game.url} passHref>
                 <a className="w-full">
                   <Image

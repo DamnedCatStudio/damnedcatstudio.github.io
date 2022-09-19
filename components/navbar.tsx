@@ -22,24 +22,28 @@ const navItems = [
     description: "Welcome to DCS",
     href: "/",
     icon: HomeIcon,
+    disabled: false,
   },
   {
     name: "About",
     description: "Get to know us!",
     href: "/about",
     icon: InformationCircleIcon,
+    disabled: false,
   },
   {
     name: "Contact",
     description: "Reach out & connect with us",
     href: "/contact",
     icon: ChatAltIcon,
+    disabled: false,
   },
   {
     name: "Our Games",
     description: "A catalog of our games",
     href: "/games",
     icon: PuzzleIcon,
+    disabled: false,
   },
 ];
 
