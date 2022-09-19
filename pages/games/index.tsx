@@ -6,8 +6,7 @@ const games = [
   {
     name: "Idle Merge",
     url: "/games/idlemerge",
-    bannerURL:
-      "https://lh3.googleusercontent.com/wL2FqkwLaDXTZQm12gEEddmDUi4EuvW7b__wtm8c4GldvqhuMhWTarkM-lUC09a96qIG",
+    bannerURL: "/images/google-play-badge.png",
     platform: "Android",
   },
 ];

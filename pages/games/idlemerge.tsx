@@ -7,8 +7,7 @@ const game = {
   stores: [
     {
       platform: "Android",
-      badgeURL:
-        "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png",
+      badgeURL: "/images/google-play-badge.png",
       badgeWidth: 240,
       badgeHeight: 93,
       altText: "Download on Google Play",
