@@ -6,7 +6,7 @@ const games = [
   {
     name: "Idle Merge",
     url: "/games/idlemerge",
-    bannerURL: "/images/google-play-badge.png",
+    bannerURL: "/images/IdleMergeFeaturedGraphic.png",
     platform: "Android",
   },
 ];

@@ -14,7 +14,7 @@ const game = {
       URL: "/games/idlemerge",
     },
   ],
-  featuredImageURL: "/images/IdleMergeFeaturedGraphic.jpg",
+  featuredImageURL: "/images/IdleMergeFeaturedGraphic.png",
   featuredImageAlt: "idle merge banner",
 
   featuredVideoURL: null,
