@@ -76,7 +76,6 @@ const GamePage = ({}) => {
             <img
               src={game.featuredImageURL}
               alt={game.featuredImageAlt}
-              layout="fill"
               className="w-full"
             />
           )}
@@ -122,7 +121,6 @@ const GamePage = ({}) => {
                   src={image.URL}
                   alt={image.alt}
                   title={game.name}
-                  layout="fill"
                   className="rounded-box"
                 />
               </div>

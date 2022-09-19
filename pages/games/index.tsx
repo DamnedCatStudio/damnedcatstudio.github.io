@@ -41,7 +41,6 @@ const GamesCatalog = ({}) => {
                     src={game.bannerURL}
                     alt={game.name + " for " + game.platform}
                     title={game.name}
-                    layout="fill"
                     className="w-full"
                   />
                 </a>
