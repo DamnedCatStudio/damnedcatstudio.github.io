@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: [
       "tailwindui.com",
+      "play.google.com",
       "images.unsplash.com",
       "damnedcat-studio.imgix.net",
       "lh3.googleusercontent.com",

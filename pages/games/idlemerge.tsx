@@ -15,31 +15,30 @@ const game = {
       URL: "/games/idlemerge",
     },
   ],
-  featuredImageURL:
-    "https://lh3.googleusercontent.com/wL2FqkwLaDXTZQm12gEEddmDUi4EuvW7b__wtm8c4GldvqhuMhWTarkM-lUC09a96qIG",
-  featuredImageAlt: "some alt text",
+  featuredImageURL: "/images/IdleMergeFeaturedGraphic.jpg",
+  featuredImageAlt: "idle merge banner",
 
   featuredVideoURL: null,
   images: [
     {
-      URL: "/idlemerge00.jpg",
-      alt: "some alt text",
+      URL: "/images/idlemerge00.jpg",
+      alt: "idle merge screenshot",
     },
     {
-      URL: "/idlemerge01.jpg",
-      alt: "some more alt text",
+      URL: "/images/idlemerge01.jpg",
+      alt: "idle merge screenshot",
     },
     {
-      URL: "/idlemerge02.jpg",
-      alt: "some different alt text",
+      URL: "/images/idlemerge02.jpg",
+      alt: "idle merge screenshot",
     },
     {
-      URL: "/idlemerge03.jpg",
-      alt: "some different alt text",
+      URL: "/images/idlemerge03.jpg",
+      alt: "idle merge screenshot",
     },
     {
-      URL: "/idlemerge04.jpg",
-      alt: "some different alt text",
+      URL: "/images/idlemerge04.jpg",
+      alt: "idle merge screenshot",
     },
   ],
   shortDescription: "Merge items, gain experience and level up!",
