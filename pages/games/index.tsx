@@ -18,7 +18,7 @@ const GamesCatalog = ({}) => {
         <meta property="og:title" content="About Us" key="title" />
         <meta
           name="description"
-          content="About the team of Damned Cat Studio"
+          content="Damned Cat's damned games"
           key="description"
         />
         <meta name="keywords" content="DCS, Damned Cat Studio" />

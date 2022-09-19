@@ -53,7 +53,7 @@ const GamePage = ({}) => {
         <meta property="og:title" content="About Us" key="title" />
         <meta
           name="description"
-          content="About the team of Damned Cat Studio"
+          content="All about Idle Merge by Damned Cat Studio"
           key="description"
         />
         <meta name="keywords" content="DCS, Damned Cat Studio" />
