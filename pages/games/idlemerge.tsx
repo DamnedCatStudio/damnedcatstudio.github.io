@@ -11,7 +11,7 @@ const game = {
       badgeWidth: 240,
       badgeHeight: 93,
       altText: "Download on Google Play",
-      URL: "/games/idlemerge",
+      URL: "https://play.google.com/store/apps/details?id=com.DamnedCatStudio.IdleMerge",
     },
   ],
   featuredImageURL: "/images/IdleMergeFeaturedGraphic.png",
