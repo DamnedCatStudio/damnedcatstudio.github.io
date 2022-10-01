@@ -43,9 +43,9 @@ export default function PostPage({ frontmatter, content }) {
         <meta name="author" content={frontmatter.author} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-10">
         {frontmatter.featuredImage ? (
-          <img src={`/images/blog/${frontmatter.featuredImage}`} />
+          <img src={`${frontmatter.featuredImage}`} className="w-full mb-4" />
         ) : null}
         <div className="prose mx-auto dark:prose-invert">
           <h1 className="mb-0 text-4xl">{frontmatter.title}</h1>
