@@ -45,6 +45,13 @@ const navItems = [
     icon: PuzzleIcon,
     disabled: false,
   },
+  {
+    name: "Tutorials",
+    description: "Dev Blog & Tutorials",
+    href: "/blog",
+    icon: PuzzleIcon,
+    disabled: false,
+  },
 ];
 
 const NavBar = () => {
