@@ -39,7 +39,7 @@ const Archive = ({ posts }) => {
                   width={650}
                   height={340}
                   alt={frontmatter.title}
-                  src={`/images/blog/${frontmatter.featuredImage}`}
+                  src={`${frontmatter.featuredImage}`}
                 />
                 <h1 className="text-base text-center p-4">
                   {frontmatter.title}
