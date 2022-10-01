@@ -45,6 +45,13 @@ const navItems = [
     icon: PuzzleIcon,
     disabled: false,
   },
+  {
+    name: "Dev Blog",
+    description: "Dev Blog & Tutorials",
+    href: "/blog",
+    icon: PuzzleIcon,
+    disabled: false,
+  },
 ];
 
 const NavBar = () => {
@@ -106,14 +113,17 @@ const NavBar = () => {
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
-          <Popover.Group as="nav" className="hidden md:flex space-x-10">
+          <Popover.Group
+            as="nav"
+            className="hidden md:flex space-x-10 items-center"
+          >
             {navItems.map((item) => {
               if (!item.disabled) {
                 return (
                   <Link href={item.href} key={item.name}>
                     <a
                       title={item.description}
-                      className="text-base font-medium text-gray-500 hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-100"
+                      className="text-base font-medium text-center text-gray-500 hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-100"
                     >
                       {item.name}
                     </a>
