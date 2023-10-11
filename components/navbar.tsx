@@ -24,20 +24,20 @@ const navItems = [
     icon: HomeIcon,
     disabled: false,
   },
-  {
-    name: "About",
-    description: "Get to know us!",
-    href: "/about",
-    icon: InformationCircleIcon,
-    disabled: false,
-  },
-  {
-    name: "Contact",
-    description: "Reach out & connect with us",
-    href: "/contact",
-    icon: ChatAltIcon,
-    disabled: false,
-  },
+  // {
+  //   name: "About",
+  //   description: "Get to know us!",
+  //   href: "/about",
+  //   icon: InformationCircleIcon,
+  //   disabled: false,
+  // },
+  // {
+  //   name: "Contact",
+  //   description: "Reach out & connect with us",
+  //   href: "/contact",
+  //   icon: ChatAltIcon,
+  //   disabled: false,
+  // },
   {
     name: "Our Games",
     description: "A catalog of our games",
@@ -45,13 +45,13 @@ const navItems = [
     icon: PuzzleIcon,
     disabled: false,
   },
-  {
-    name: "Dev Blog",
-    description: "Dev Blog & Tutorials",
-    href: "/blog",
-    icon: PuzzleIcon,
-    disabled: false,
-  },
+  // {
+  //   name: "Dev Blog",
+  //   description: "Dev Blog & Tutorials",
+  //   href: "/blog",
+  //   icon: PuzzleIcon,
+  //   disabled: false,
+  // },
 ];
 
 const NavBar = () => {
@@ -93,7 +93,7 @@ const NavBar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 border-gray-100 dark:border-gray-800 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1 p-1.5 pb-0 rounded-full ring-2 ring-amber-600 dark:ring-white max-w-[60px]">
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <a>
                 <span className="sr-only">Damned Cat Studio</span>
                 <Image
@@ -108,7 +108,7 @@ const NavBar = () => {
           </div>
           <div className="mr-2 ml-[auto] md:hidden">{renderThemeToggle()}</div>
           <div className="-mr-2 -my-2 md:hidden">
-            <Popover.Button className="bg-white dark:bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">
+            <Popover.Button className="bg-white dark:bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -120,10 +120,10 @@ const NavBar = () => {
             {navItems.map((item) => {
               if (!item.disabled) {
                 return (
-                  <Link href={item.href} key={item.name}>
+                  <Link legacyBehavior href={item.href} key={item.name}>
                     <a
                       title={item.description}
-                      className="text-base font-medium text-center text-gray-500 hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-100"
+                      className="text-base font-medium text-center text-gray-700 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-100"
                     >
                       {item.name}
                     </a>
@@ -143,7 +143,7 @@ const NavBar = () => {
             })}
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <Link href="/contact">
+            <Link legacyBehavior href="/contact">
               <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-amber-600 to-amber-700 hover:bg-amber-700 dark:hover:bg-amber-700">
                 <ChatAltIcon
                   className="flex-shrink-0 h-6 w-6 text-white"
@@ -183,7 +183,7 @@ const NavBar = () => {
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="bg-white dark:bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">
+                  <Popover.Button className="bg-white dark:bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -194,7 +194,7 @@ const NavBar = () => {
                   {navItems.map((item) => {
                     if (!item.disabled) {
                       return (
-                        <Link href={item.href} key={item.name}>
+                        <Link legacyBehavior href={item.href} key={item.name}>
                           <a
                             title={item.description}
                             className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-700"
@@ -220,7 +220,7 @@ const NavBar = () => {
                             className="flex-shrink-0 h-6 w-6 text-amber-800"
                             aria-hidden="true"
                           />
-                          <span className="ml-3 text-base font-medium text-gray-300 dark:text-gray-500">
+                          <span className="ml-3 text-base font-medium text-gray-300 dark:text-gray-700">
                             {item.name}
                           </span>
                         </p>
@@ -232,7 +232,7 @@ const NavBar = () => {
             </div>
             <div className="py-6 px-5 space-y-6">
               <div>
-                <Link href="/contact">
+                <Link legacyBehavior href="/contact">
                   <a className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-amber-600 to-amber-700 hover:bg-amber-700 dark:hover:bg-amber-700">
                     <ChatAltIcon
                       className="flex-shrink-0 h-6 w-6 text-white"

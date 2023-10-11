@@ -62,7 +62,7 @@ const GamePage = ({}) => {
       </Head>
 
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-24 prose dark:prose-invert">
-        <h1>{game.name}</h1>
+        <h1 className="text-gray-800 dark:text-gray-200">{game.name}</h1>
         <div className="bg-gray-50 w-full rounded-box">
           {game.featuredVideoURL ? (
             <video
@@ -81,10 +81,12 @@ const GamePage = ({}) => {
           )}
         </div>
 
-        <h2 className="">{game.shortDescription}</h2>
-        <h3>Download Now</h3>
+        <h2 className="text-gray-800 dark:text-gray-200">
+          {game.shortDescription}
+        </h2>
+        <h3 className="text-gray-800 dark:text-gray-200">Download Now</h3>
         {game.stores.map((store, index) => (
-          <Link key={index} href={store.URL}>
+          <Link legacyBehavior key={index} href={store.URL}>
             <a>
               <img
                 src={store.badgeURL}
@@ -127,16 +129,16 @@ const GamePage = ({}) => {
             ))}
           </div>
         </div>
-        <h3>About</h3>
+        <h3 className="text-gray-800 dark:text-gray-200">About</h3>
         {game.longDescription.split("\n").map((str) => (
-          <p key={str} className="text-base">
+          <p key={str} className="text-base text-gray-800 dark:text-gray-200">
             {str}
           </p>
         ))}
         {game.features ? (
           <>
-            <h3>Features</h3>
-            <ul>
+            <h3 className="text-gray-800 dark:text-gray-200">Features</h3>
+            <ul className="text-gray-800 dark:text-gray-200">
               {game.features.map((feature) => (
                 <li key={feature}>{feature}</li>
               ))}
