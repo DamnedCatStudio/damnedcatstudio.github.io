@@ -57,6 +57,7 @@ const About = ({}) => {
                     className="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56 object-cover"
                     width={200}
                     height={200}
+                    unoptimized
                     src={person.imageUrl}
                     alt=""
                   />
