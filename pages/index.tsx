@@ -91,6 +91,7 @@ const Home = () => {
               <Image
                 width={142}
                 height={80}
+                unoptimized
                 className="h-20"
                 src="/images/steam-logo.png"
                 alt="Unity"
@@ -100,6 +101,7 @@ const Home = () => {
               <Image
                 width={142}
                 height={80}
+                unoptimized
                 className="h-20"
                 src="/images/unity-logo.png"
                 alt="Unity"
@@ -109,6 +111,7 @@ const Home = () => {
               <Image
                 width={142}
                 height={80}
+                unoptimized
                 className="h-20"
                 src="/images/meta-logo.png"
                 alt="Meta"
@@ -118,6 +121,7 @@ const Home = () => {
               <Image
                 width={142}
                 height={80}
+                unoptimized
                 className="h-20"
                 src="/images/oculus-logo.png"
                 alt="Unity"

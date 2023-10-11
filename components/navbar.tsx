@@ -100,6 +100,7 @@ const NavBar = () => {
                   className="rounded-full"
                   width={52}
                   height={50}
+                  unoptimized
                   src={"/images/damnedcatstudio.jpg"}
                   alt="Damned Cat Damned Logo"
                 />
@@ -178,6 +179,7 @@ const NavBar = () => {
                     className="rounded-full"
                     width={52}
                     height={50}
+                    unoptimized
                     src={"/images/damnedcatstudio.jpg"}
                     alt="Damned Cat Damned Logo"
                   />
