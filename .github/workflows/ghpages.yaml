@@ -1,26 +1,22 @@
 name: Deploy to GitHub Pages
 
-
 on:
   push:
     branches: [master, main]
-
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-
     strategy:
       matrix:
-        node-version: [14.x]
-
+        node-version: [20.x]
 
     steps:
       - name: Get files
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install packages
@@ -36,7 +32,7 @@ jobs:
       - name: Update CNAME
         run: echo damnedcat.studio >> ./out/CNAME
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
           branch: gh-pages
           folder: out
