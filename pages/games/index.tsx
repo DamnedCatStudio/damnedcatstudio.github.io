@@ -27,7 +27,9 @@ const GamesCatalog = ({}) => {
       </Head>
 
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-24 prose dark:prose-invert">
-        <h1 className="prose-2xl">Featured Games</h1>
+        <h1 className="prose-2xl text-gray-800 dark:text-gray-200">
+          Featured Games
+        </h1>
         <div className="carousel w-full bg-gray-50">
           {games.map((game, index) => (
             <div
@@ -35,7 +37,7 @@ const GamesCatalog = ({}) => {
               id={(index + 1).toString()}
               className="carousel-item w-full"
             >
-              <Link href={game.url} passHref>
+              <Link legacyBehavior href={game.url} passHref>
                 <a className="w-full">
                   <img
                     src={game.bannerURL}

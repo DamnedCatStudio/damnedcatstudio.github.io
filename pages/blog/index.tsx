@@ -33,7 +33,7 @@ const Archive = ({ posts }) => {
             key={slug}
             className="border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden flex flex-col"
           >
-            <Link href={`/blog/${slug}`}>
+            <Link legacyBehavior href={`/blog/${slug}`}>
               <a>
                 <img
                   width={650}

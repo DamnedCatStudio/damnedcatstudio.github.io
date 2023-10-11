@@ -1,11 +1,11 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment, useState } from 'react'
-import { Transition } from '@headlessui/react'
-import { CheckCircleIcon } from '@heroicons/react/outline'
-import { XIcon } from '@heroicons/react/solid'
+import { Fragment, useState } from "react";
+import { Transition } from "@headlessui/react";
+import { CheckCircleIcon } from "@heroicons/react/outline";
+import { XIcon } from "@heroicons/react/solid";
 
 export default function Notice() {
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(true);
 
   return (
     <>
@@ -30,15 +30,21 @@ export default function Notice() {
               <div className="p-4">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <CheckCircleIcon className="h-6 w-6 text-green-400" aria-hidden="true" />
+                    <CheckCircleIcon
+                      className="h-6 w-6 text-green-400"
+                      aria-hidden="true"
+                    />
                   </div>
                   <div className="ml-3 w-0 flex-1 pt-0.5">
-                    <p className="text-sm font-medium text-gray-900">Message Sent Successfully!</p>
-                    <p className="mt-1 text-sm text-gray-500">You&apos;re message has been sent. We&apos;ll get back to you as soon as we can.</p>
+                    <p className="text-sm font-medium text-gray-900">
+                      Message Sent Successfully!
+                    </p>
+                    <p className="mt-1 text-sm text-gray-700">
+                      You&apos;re message has been sent. We&apos;ll get back to
+                      you as soon as we can.
+                    </p>
                   </div>
-                  <div className="ml-4 flex-shrink-0 flex">
-
-                  </div>
+                  <div className="ml-4 flex-shrink-0 flex"></div>
                 </div>
               </div>
             </div>
@@ -46,5 +52,5 @@ export default function Notice() {
         </div>
       </div>
     </>
-  )
+  );
 }
