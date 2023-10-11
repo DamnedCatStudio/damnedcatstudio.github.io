@@ -40,7 +40,7 @@ const About = ({}) => {
               Meet our team; Co-founded by two friends using what they learn to
               try to do something different! If you want to join in on our
               shinanigans{" "}
-              <Link legacyBehavior href="/contact">
+              <Link legacyBehavior href="https://discord.gg/MvbmbswYSa">
                 <a className="font-bold underline">contact us</a>
               </Link>
               .

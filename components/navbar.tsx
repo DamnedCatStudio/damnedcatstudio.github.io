@@ -144,7 +144,7 @@ const NavBar = () => {
             })}
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <Link legacyBehavior href="/contact">
+            <Link legacyBehavior href="https://discord.gg/MvbmbswYSa">
               <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-amber-600 to-amber-700 hover:bg-amber-700 dark:hover:bg-amber-700">
                 <ChatAltIcon
                   className="flex-shrink-0 h-6 w-6 text-white"
@@ -234,7 +234,7 @@ const NavBar = () => {
             </div>
             <div className="py-6 px-5 space-y-6">
               <div>
-                <Link legacyBehavior href="/contact">
+                <Link legacyBehavior href="https://discord.gg/MvbmbswYSa">
                   <a className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-amber-600 to-amber-700 hover:bg-amber-700 dark:hover:bg-amber-700">
                     <ChatAltIcon
                       className="flex-shrink-0 h-6 w-6 text-white"
