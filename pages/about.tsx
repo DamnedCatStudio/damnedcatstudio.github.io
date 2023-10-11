@@ -37,7 +37,7 @@ const About = ({}) => {
               Meet our team
             </h2>
             <p className="text-xl text-gray-700 dark:text-gray-200">
-              Meet our team; Co-founded by two idiots using what they learn to
+              Meet our team; Co-founded by two friends using what they learn to
               try to do something different! If you want to join in on our
               shinanigans{" "}
               <Link legacyBehavior href="/contact">
