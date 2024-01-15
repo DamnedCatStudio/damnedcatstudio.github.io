@@ -62,7 +62,7 @@ const Home = () => {
               </p>
               <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                 <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                  <Link legacyBehavior href="/contact">
+                  <Link legacyBehavior href="https://discord.gg/MvbmbswYSa">
                     <a className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-amber-700 bg-white hover:bg-amber-50 sm:px-8">
                       Let&apos;s chat
                     </a>
